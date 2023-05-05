@@ -35,65 +35,46 @@
 
             <!-- Main Content -->
             <main>
-                <h>Activities</h>
-                <p>
-                There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:
-                
-                <!-- Start of Table -->
-                <table border="1">
-                    <caption>Activities at the Cliffs</caption>
-                    <thead>
-                        <tr>
-                            <th>Activity</th>
-                            <th>West Cliff</th>
-                            <th>North Cliff</th>
-                            <th>East Cliff</th>
-                            <th>South Cliff</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hiking</td>
-                            <td>Kayak</td>
-                            <td>Skydiving</td>
-                            <td>Biking</td>
-                            <td>Camping</td>
-                        </tr>
-                        <tr>
-                            <td>College Hikes</td>
-                            <td>Western Kayak Meetup</td>
-                            <td>Seacliff Diving</td>
-                            <td>Bicycle for One</td>
-                            <td>Youth Camp</td>
-                        </tr>
-                        <tr>
-                            <td>Family Fun</td>
-                            <td>Not Available</td>
-                            <td>Sky is the limit</td>
-                            <td>Not Available</td>
-                            <td>Rent a Tent</td>
-                        </tr>
-                        <tr>
-                            <td>Treasure Trails</td>
-                            <td>Youth Kayaking</td>
-                            <td>Not Available</td>
-                            <td>Bike Meetup Group</td>
-                            <td>Campground Adventure</td>
-                        </tr>
-                    </tbody>
-                    <tfooter>
-                        <tr>
-                            <td>Canyon Explorer</td>
-                            <td>Kayak Down</td>
-                            <td>Sky Diving for Beginners</td>
-                            <td>Not Available</td>
-                            <td>Sunset Camping</td>
-                        </tr>
-                    </tfooter>
-                </table>
+                <h1>Contacting Us</h1>
+                <p>If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us bu using one of the following:</p>
+                <h2>Phone:</h2>
+                <p>(800)GCLIFFS</p>
+                <h2>Email:</h2>
+                <p>info@greatcliffs.com</p>
 
-                </p>
-                
+            <!-- Form Start -->
+            <form action="/contact" method="post">
+                <fieldset>
+                    <legend>Contact Form</legend>
+
+                    <label>Enter your full name</label><br>
+                    <input type="text" name="name" ><br>
+
+                    <label>Enter your email</label><br>
+                    <input type="email" name="email" ><br>
+
+                    <label>Enter your phone</label><br>
+                    <input type="text" name="phone" ><br><br>
+
+                    <label>How should we contact you?</label><br>
+                    <input type="radio" name="Contact" value="Email">Email
+                    <input type="radio" name="Contact" value="Phone">Phone
+                    <br><br>
+    
+                    <label>Which Cliff are you inquiring?</label>
+                    <select>
+                        <option>West Cliff</option>
+                        <option>North Cliff</option>
+                        <option>East Cliff</option>
+                        <option>South Cliff</option>
+                    </select><br>
+                <br>How did you hear about us:<br>
+                <textarea rows="5" cols="30"></textarea><br>
+                <input type="submit" value="sign-up">
+                </fieldset>
+            </form>
+            <!-- Form End -->
+
             </main>
             <!-- End of Main Content -->
 
