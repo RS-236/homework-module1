@@ -179,3 +179,53 @@ td:first-child {
     font-weight: bold;
     background: #BDE1FF;
 }
+
+/* Contact */
+.phone span:first-child {
+    font-weight: 600;
+}
+.email span:first-child {
+    font-weight: 600;
+}
+.phone {
+    padding-bottom: 10px;
+}
+.contactinfo {
+    padding: 5px 0 20px;
+}
+fieldset {
+    border: 1px solid #9ed034;
+}
+legend {
+    color: #4977D1;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+label {
+    display: block;
+    margin: 15px 0 0 0;
+    font-weight: 600;
+}
+input {
+    width: 500px;
+}
+input[type="radio"] {
+    width: 25px;
+}
+textarea {
+    width: 500px;
+    height: 150px;
+}
+select {
+    width: 150px;
+    text-align: center;
+    font-weight: 600;
+}
+input[type="submit"] {
+    display: block;
+    background-color: #4977D1;
+    color: #fff;
+    margin: 15px 405px 10px;
+    width: 100px;
+    padding: 5px;
+}
