@@ -76,6 +76,24 @@ main h1 {
     color: #9ed034;
 }
 
+.Greatest-cliffs {
+    display: block;
+    font-weight: 600;
+
+}
+.Greatest-cliffs label {
+    color: white;
+    background-color: maroon;
+    width: 350px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: 12px;
+}
+.Greatest-cliffs img {
+    width: 350px;
+    height: 200px;
+    padding-bottom: 25px;
+}
 /* Partners */
 section {
     width: 100%;
