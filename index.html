@@ -115,7 +115,8 @@
             var timeDiff; //To store time difference between GMT hour and local hour
             var adjTimeDiff; //To store time difference converted to positive number
             var timeZone; //To store the 4 time zones (PT, MT, CT, ET)
-        
+        console.log();
+
             //Add 0 to single digits for seconds
             if (sec < 10) {
                 sec = "0" + sec;
@@ -135,11 +136,33 @@
             } else {
                 ampm = "AM"; //Set to AM
             }
+ 
+            if (utchr > 12) {
+                utchr -= 12;
+            }
 
-            
+            timeDiff = utchr - hr;
+
+            if (timeDiff < 0) {
+                adjTimeDiff = timeDiff * -1;
+            } else {
+                adjTimeDiff = timeDiff;
+            }
+
+            if (adjTimeDiff == 8) {
+                timeZone = "PT";
+            } else if (adjTimeDiff == 7) {
+                timeZone = "MT";
+            } else if (adjTimeDiff == 6) {
+                timeZone = "CT";
+            } else if (adjTimeDiff == 5) {
+                timeZone = "ET";
+            } else {
+                timeZone = "GMT";
+            }
 
             //Assemble time format to display
-            var time = hr + ":" + min + ":" + sec + " " + ampm + " " + utchr;
+            var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
 
             //Display current local time and time zone on HTML elements
             document.getElementById("clock").innerText = time; //adding time
