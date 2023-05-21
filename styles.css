@@ -114,24 +114,21 @@ width: 100%;
 }
 
 /* Partners */
-section {
-    width: 100%;
-}
-section #partners {
+#partners {
     background-color: #4288C3;
     width: 1200px;
     padding: 2em 0 2em 0;
     margin: 0 auto;
     text-align: center;
 }
-section #partners .partner {
+#partners .partner {
     display: inline-block;
     margin: 0 0.75em;
     padding: 1.3em 1.5em;
     background-color: #fff;
     border-radius: 50%;
 }
-section #partners .partner img {
+#partners .partner img {
     width: 90px;
     height: 90px;
 }
