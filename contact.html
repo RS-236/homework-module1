@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="styles.css">
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
 
     </head>
 
@@ -58,31 +63,33 @@
                 <fieldset>  
                     <legend>Contact Form</legend>
                     <div class="textbox">
-                        <label>Name:</label> 
+                        <label>Enter your full name</label> 
                         <input type="text" name="name" placeholder="John Doe">  
-                        <label>Email:</label>  
-                        <input type="email" name="email" placeholder="johndoe@gmail.com"> 
-                        <label>Phone:</label>
-                        <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
                     </div>
                     
                     <div class="radios">
                         <div id="radio">
-                        <label>How should we contact you?</label>
-                        <input type="radio" name="contact" value="email" checked>Email 
-                        <input type="radio" name="contact" value="phone">Phone    
+                        <label>Select your gender</label>
+                        <input type="radio" name="contact" value="Male" checked>Male
+                        <input type="radio" name="contact" value="Female">Female    
                         </div>
                     </div>
                 
                     <div class="selectmenu"></label>
-                        <label>Which Cliff are you inquiring?</label>
-                        <select>
-                            <option>West Cliff</option>
-                            <option>North Cliff</option>
-                            <option>East Cliff</option>
-                            <option>South Cliff</option>
+                        <label for="dropdown">How should we contact you?</label>
+                        <select id="dropdown" onchange="showInputBox()">
+                            <option value="option1">Select One</option>
+                            <option value="option2">Phone</option>
+                            <option value="option3">Email</option>
                         </select>
+
+                        <div id="inputBox2" class="hidden">
+                            <label for="input2">Enter your phone</label>
+                            <input type="text" id="input2"></div>
                         
+                        <div id="inputBox3" class="hidden">
+                            <label for="input3">Enter your email</label>
+                            <input type="text" id="input3"></div>
                     </div>
                     
                     <div class="commentbox">
@@ -102,6 +109,23 @@
                 </fieldset>  
                 </form>
                 <!-- Form End -->
+
+                <script>
+                    function showInputBox() {
+                        var dropdown = document.getElementById("dropdown");
+                        var selectedOption = dropdown.value;
+
+                        var inputBoxes = document.querySelectorAll("div[id^='inputBox']");
+                            inputBoxes.forEach(function(box) {
+                                box.classList.add("hidden");
+                    });
+                    
+                    
+                    var selectedInputBox = document.getElementById("inputBox" + selectedOption);
+
+                    selectedInputBox.classList.remove("hidden");
+                }
+                </script>
 
             </main>
             <!-- End of Main Content -->
