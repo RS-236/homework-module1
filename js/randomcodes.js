@@ -11,7 +11,7 @@ for (i = 1; i <= 8; i++) {
     var char = Math.random()* str.length;  //random select a character from the variable
     code += str.charAt(char) //accumulate the generated character into a string of 8
 }
-return code; //return the final accumlated string when loop ends
+return code; //return the final accumulated string when loop ends
 }
 
 //Get HTML element to display
